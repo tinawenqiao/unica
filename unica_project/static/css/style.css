@@ -343,6 +343,7 @@ Header and header elements.
   margin-right: 0;
   padding-left: 0;
   padding-right: 0;
+    padding-top: 5px;
   width: 225px;
 }
 
@@ -413,6 +414,11 @@ Header and header elements.
 
 .header .nav > li.dropdown .dropdown-toggle i {
   font-size: 18px;
+}
+
+/*topright字体大小*/
+.header .nav > li.dropdown-topright .dropdown-toggle i {
+    font-size: 20px;
 }
 
 .header .nav > li.dropdown.user .dropdown-toggle {
@@ -4681,13 +4687,19 @@ Horezantal Menu(new in v1.2)
 
 .header .hor-menu ul.nav li a {
   font-size: 14px;
-  padding: 11px 18px; 
+  padding: 11px 18px;
 }
+
 
 .ie8 .header .hor-menu a.dropdown-toggle {
   padding-top: 10px !important;
+    display: block;
 }
 
+.header .hor-menu a.dropdown-toggle {
+    padding-top: 10px !important;
+    display: block;
+}
 .header .hor-menu ul.nav li {
   position: relative;
 }
@@ -5319,3 +5331,6 @@ Datatables Plugin(in v1.3)
 .dataTable .details tr:nth-child(even) th {
   background-color: #eee !important;
 }
+
+
+.dropdown:hover .dropdown-menu {    display: block; }
