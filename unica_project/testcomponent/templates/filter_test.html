@@ -1,0 +1,11 @@
+{% load filtertest_extras %}
+
+<h1>These are test values</h1>
+<p>A good Django app is worth: {{ myprice }}.</p>
+<p>My thoughts on Django: {{ mythoughts|add_prefix:"zz" }}</p>
+<p>Words to describe Django: {{ mywords }}</p>
+
+
+<h1>These are test tags</h1>
+
+<p>The time is {% current_time "%Y-%m-%d %I:%M %p" %}.</p>

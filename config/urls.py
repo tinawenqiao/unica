@@ -11,6 +11,8 @@ from django.views import defaults as default_views
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name="home"),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name="about"),
+    url(r'^500/$', TemplateView.as_view(template_name="500.html")),
+    url(r'^404/$', TemplateView.as_view(template_name="404.html")),
 
     # Django Admin, use {% url 'admin:index' %}
     url(settings.ADMIN_URL, include(admin.site.urls)),
@@ -32,4 +34,5 @@ if settings.DEBUG:
         url(r'^403/$', default_views.permission_denied),
         url(r'^404/$', default_views.page_not_found),
         url(r'^500/$', default_views.server_error),
+    	url(r'^filtertag/', 'unica_project.testcomponent.views.test'),
     ]
